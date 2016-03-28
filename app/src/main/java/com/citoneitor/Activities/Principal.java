@@ -44,5 +44,15 @@ public class Principal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //Se agrega el botón de nueva cita
+        ImageView imageViewNuevaCita = (ImageView) findViewById(R.id.principal_agregar_cita);
+        imageViewNuevaCita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Principal.this, NuevaCita.class);
+                startActivity(intent);
+            }
+        });
     }
 }

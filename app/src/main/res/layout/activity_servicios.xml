@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.citoneitor.Activities.Principal">
+    tools:context="com.citoneitor.Activities.Servicios">
     <android.support.v7.widget.Toolbar
         android:id="@+id/actividades_toolbar"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
                 android:alpha=".88"
                 android:src="@drawable/icono_cliente"
                 android:layout_marginRight="10dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:id="@+id/principal_clientes"
                 android:layout_width="35dp"
                 android:layout_height="35dp" />
@@ -30,35 +30,9 @@
                 android:gravity="center"
                 android:textColor="#FFFFFF"
                 android:textSize="19sp"
-                android:text="Citas"
+                android:text="Servicios"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
-    <com.citoneitor.LibreriaTabsSliding.SlidingTabLayout
-        android:id="@+id/principal_tabs"
-        android:layout_width="match_parent"
-        android:background="@color/colorPrimary"
-        android:layout_height="wrap_content"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <android.support.v4.view.ViewPager
-            android:id="@+id/principal_pager"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent">
-
-        </android.support.v4.view.ViewPager>
-        <ImageView
-            android:id="@+id/principal_agregar_cita"
-            android:layout_marginBottom="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/boton_agregar"
-            android:layout_width="80dp"
-            android:layout_height="80dp" />
-    </RelativeLayout>
 </LinearLayout>
