@@ -1,5 +1,6 @@
 package com.citoneitor.Adaptadores;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -12,8 +13,10 @@ import com.citoneitor.Fragment.FragmentProximasCitas;
  */
 public class AdaptadorCitasTabs extends FragmentStatePagerAdapter {
 
-    public AdaptadorCitasTabs(FragmentManager fm) {
+    private Activity activity;
+    public AdaptadorCitasTabs(FragmentManager fm, Activity activity) {
         super(fm);
+        this.activity = activity;
     }
 
     @Override
@@ -21,11 +24,13 @@ public class AdaptadorCitasTabs extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0 :
-
-                return new FragmentProximasCitas();
+                FragmentProximasCitas fragmentProximasCitas = new FragmentProximasCitas();
+                fragmentProximasCitas.setActivity(activity);
+                return fragmentProximasCitas;
             case 1 :
-
-                return new FragmentCitasPasadas();
+                FragmentCitasPasadas fragmentCitasPasadas = new FragmentCitasPasadas();
+                fragmentCitasPasadas.setActivity(activity);
+                return fragmentCitasPasadas;
             default:
 
                 return null;

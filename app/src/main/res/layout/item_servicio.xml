@@ -1,30 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="61dp">
-    <RelativeLayout
+    android:layout_height="101dp">
+    <LinearLayout
+        android:id="@+id/item_servicio_click"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="85dp">
         <TextView
+            android:id="@+id/item_servicio_nombre"
+            android:alpha=".87"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="70dp"
+            android:text="Servicio para X Cosa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/item_servicio_duracion"
+            android:layout_marginTop="5dp"
             android:alpha=".87"
             android:textColor="#000000"
             android:fontFamily="sans-serif-light"
-            android:textSize="18sp"
-            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="40dp"
             android:layout_marginRight="70dp"
-            android:layout_centerVertical="true"
-            android:text="Servicio para X Cosa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Switch
-            android:layout_marginRight="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
+            android:text="Duracion: 15 minutos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/item_servicio_costo"
+            android:layout_marginTop="5dp"
+            android:alpha=".87"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-light"
+            android:textSize="16sp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="70dp"
+            android:text="Costo: $100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
     <TextView
-        android:background="@color/colorAccent"
+        android:alpha=".5"
+        android:background="@color/colorAcento"
         android:layout_width="match_parent"
         android:layout_height="1dp" />
 </LinearLayout>

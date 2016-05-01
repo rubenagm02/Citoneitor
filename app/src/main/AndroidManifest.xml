@@ -19,7 +19,8 @@
         <activity android:name=".Activities.Clientes" />
         <activity android:name=".Activities.NuevoCliente" />
         <activity android:name=".Activities.NuevaCita" />
-        <activity android:name=".Activities.Servicios"></activity>
+        <activity android:name=".Activities.Servicios" />
+        <activity android:name=".Activities.NuevoServicio"></activity>
     </application>
 
 </manifest>

@@ -5,34 +5,57 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.citoneitor.Activities.Servicios">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/actividades_toolbar"
-        android:layout_height="wrap_content"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
-        android:background="@color/colorPrimary"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-        <RelativeLayout
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:alpha=".88"
-                android:src="@drawable/icono_cliente"
-                android:layout_marginRight="10dp"
-                android:layout_alignParentLeft="true"
-                android:id="@+id/principal_clientes"
-                android:layout_width="35dp"
-                android:layout_height="35dp" />
-            <TextView
-                android:fontFamily="sans-serif-light"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textSize="19sp"
-                android:text="Servicios"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
+            android:layout_height="match_parent">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/actividades_toolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
+                android:background="@color/colorPrimary"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:alpha=".88"
+                        android:src="@drawable/icono_cliente"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/principal_clientes"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+                    <TextView
+                        android:fontFamily="sans-serif-light"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="19sp"
+                        android:text="Servicios"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+            <ListView
+                android:id="@+id/servicios_lista"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/servicios_agregar_servicio"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/boton_agregar"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+    </RelativeLayout>
 </LinearLayout>

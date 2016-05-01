@@ -8,11 +8,12 @@ public class Cita {
     private String fecha;
     private int idCliente;
     private int tipoCita;
-    private int idEstatusCita;
+    private String idEstatusCita;
     private double costo;
     private String hora;
+    private int servicio;
 
-    public Cita(int id, String fecha, int idCliente, int tipoCita, int idEstatusCita, double costo, String hora) {
+    public Cita(int id, String fecha, int idCliente, int tipoCita, String idEstatusCita, double costo, String hora, int servicio) {
         this.id = id;
         this.fecha = fecha;
         this.idCliente = idCliente;
@@ -20,6 +21,7 @@ public class Cita {
         this.idEstatusCita = idEstatusCita;
         this.costo = costo;
         this.hora = hora;
+        this.servicio = servicio;
     }
 
     public int getId() {
@@ -54,11 +56,11 @@ public class Cita {
         this.tipoCita = tipoCita;
     }
 
-    public int getIdEstatusCita() {
+    public String getIdEstatusCita() {
         return idEstatusCita;
     }
 
-    public void setIdEstatusCita(int idEstatusCita) {
+    public void setIdEstatusCita(String idEstatusCita) {
         this.idEstatusCita = idEstatusCita;
     }
 
@@ -76,5 +78,13 @@ public class Cita {
 
     public void setHora(String hora) {
         this.hora = hora;
+    }
+
+    public int getServicio() {
+        return servicio;
+    }
+
+    public void setServicio(int servicio) {
+        this.servicio = servicio;
     }
 }

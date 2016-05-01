@@ -14,7 +14,7 @@ import com.citoneitor.LibreriaTabsSliding.SlidingTabLayout;
 import com.citoneitor.R;
 
 public class Principal extends AppCompatActivity {
-
+    private ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,16 +24,7 @@ public class Principal extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.actividades_toolbar);
         setSupportActionBar(toolbar);
 
-        //Se cargan las tabs
-        AdaptadorCitasTabs adaptadorActividadesTabs = new AdaptadorCitasTabs(getSupportFragmentManager());
-
-        ViewPager viewPager = (ViewPager) findViewById(R.id.principal_pager);
-        viewPager.setAdapter(adaptadorActividadesTabs);
-
-        SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.principal_tabs);
-        slidingTabLayout.setDistributeEvenly(true);
-        slidingTabLayout.setSelectedIndicatorColors(Color.rgb(201, 230, 227));
-        slidingTabLayout.setViewPager(viewPager);
+        viewPager = (ViewPager) findViewById(R.id.principal_pager);
 
         //Se activa el click de abrir los clientes
         ImageView imageViewAbrirClientes = (ImageView) findViewById(R.id.principal_clientes);
@@ -47,12 +38,27 @@ public class Principal extends AppCompatActivity {
 
         //Se agrega el botón de nueva cita
         ImageView imageViewNuevaCita = (ImageView) findViewById(R.id.principal_agregar_cita);
+
         imageViewNuevaCita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Principal.this, NuevaCita.class);
+                intent.putExtra("tipo", 0);
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        //Se cargan las tabs
+        AdaptadorCitasTabs adaptadorActividadesTabs = new AdaptadorCitasTabs(getSupportFragmentManager(), this);
+        viewPager.setAdapter(adaptadorActividadesTabs);
+
+        SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.principal_tabs);
+        slidingTabLayout.setDistributeEvenly(true);
+        slidingTabLayout.setSelectedIndicatorColors(Color.rgb(201, 230, 227));
+        slidingTabLayout.setViewPager(viewPager);
     }
 }

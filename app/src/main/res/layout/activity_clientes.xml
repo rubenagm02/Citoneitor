@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
+                android:id="@+id/clientes_atras"
                 android:alpha=".87"
                 android:src="@drawable/icono_cliente"
                 android:layout_alignParentLeft="true"
@@ -28,7 +29,7 @@
                 android:gravity="center"
                 android:textColor="#FFFFFF"
                 android:textSize="19sp"
-                android:text="Citas"
+                android:text="Clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -37,10 +38,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ListView
+            android:id="@+id/clientes_lista"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ListView>
         <ImageView
+            android:id="@+id/clientes_agregar_cliente"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="15dp"
             android:layout_alignParentRight="true"

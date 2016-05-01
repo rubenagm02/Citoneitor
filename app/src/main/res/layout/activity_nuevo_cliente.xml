@@ -53,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <EditText
+                android:id="@+id/nuevo_cliente_nombre"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:inputType="textPersonName"
@@ -65,6 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <EditText
+                android:id="@+id/nuevo_cliente_apellido_paterno"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:inputType="textPersonName"
@@ -77,6 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <EditText
+                android:id="@+id/nuevo_cliente_apellido_materno"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:inputType="textPersonName"
@@ -97,6 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
+                android:id="@+id/nuevo_cliente_fecha_nacimiento"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
@@ -114,10 +118,28 @@
                 android:fontFamily="sans-serif-medium"
                 android:textColor="@color/colorFuerte"
                 android:textSize="16sp"
+                android:text="Sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ToggleButton
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:id="@+id/nuevo_cliente_sexo"
+                android:layout_marginTop="10dp"
+                android:textOn="Mujer"
+                android:textOff="Hombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/colorFuerte"
+                android:textSize="16sp"
                 android:text="Contacto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <EditText
+                android:id="@+id/nuevo_cliente_telefono"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:inputType="number"
@@ -130,6 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <EditText
+                android:id="@+id/nuevo_cliente_correo"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:inputType="textEmailAddress"
@@ -142,6 +165,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
+                android:id="@+id/nuevo_cliente_guardar"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="30dp"
@@ -150,6 +174,7 @@
                 android:elevation="5dp"
                 android:gravity="center"
                 android:text="Guardar"
+                android:layout_marginBottom="20dp"
                 android:textColor="#FFFFFF"
                 android:background="@color/colorAcento"
                 android:layout_width="match_parent"
